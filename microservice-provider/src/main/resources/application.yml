@@ -19,3 +19,12 @@ spring:
 eureka:
   client:
     service-url.defaultZone: http://localhost:7001/eureka # 配置eureka server的地址。
+  instance:
+    instance-id: microservice-provider-dept # 配置当前服务的服务名称
+    prefer-ip-address: true # 访问路径可以显示ip地址
+
+
+info: # 配置info信息
+  app.name: baihuayang-microservice-cloud
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
