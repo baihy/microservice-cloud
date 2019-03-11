@@ -76,9 +76,10 @@
                 <artifactId>spring-boot-test</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-devtools</artifactId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <!--引入mysql的驱动包-->
@@ -112,12 +113,12 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>  <!--这个插件就是负责解读，在src/main/resources下面以$开头和结尾信息，就能够读取。-->
+            <plugin><!--这个插件就是负责解读，在src/main/resources下面以$开头和结尾信息，就能够读取。-->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <delimiters>
-                        <delimit>$</delimit>
+                        <delimit>@</delimit><!--注意，这里如果用$是不起作用的-->
                     </delimiters>
                 </configuration>
             </plugin>

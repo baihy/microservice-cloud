@@ -10,8 +10,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: root
-    url: jdbc:mysql://127.0.0.1:3308/microservice-cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true
+    password: hnzsfwq
+    url: jdbc:mysql://127.0.0.1:3307/microservice-cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true
     type: com.alibaba.druid.pool.DruidDataSource # 指定当前的数据源类型
   application:
     name: microservice-provider-dept
@@ -24,7 +24,10 @@ eureka:
     prefer-ip-address: true # 访问路径可以显示ip地址
 
 
-info: # 配置info信息
-  app.name: baihuayang-microservice-cloud
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+
+
+info:
+  company: 河南中审科技有限公司
+  projectName: @project.artifactId@
+  version: @project.version@
+

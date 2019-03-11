@@ -1,8 +1,8 @@
 server:
-  port: 7001
+  port: 7001 # 服务的端口号
 eureka:
   instance:
-    hostname: localhost
+    hostname: localhost   # 设置Eureka服务的主机名称
 
   client:
     register-with-eureka: false

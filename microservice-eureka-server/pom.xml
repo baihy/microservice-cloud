@@ -23,11 +23,6 @@
             在在这配置不需要指定eureka-server的版本号
             -->
         </dependency>
-        <!--引入热部署的依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
