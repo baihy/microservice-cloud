@@ -1,6 +1,8 @@
 server:
   port: 7001 # 服务的端口号
 eureka:
+  server:
+    enable-self-preservation: true # Eureka Server关闭自我保护机制
   instance:
     hostname: localhost   # 设置Eureka服务的主机名称
 
@@ -8,3 +10,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+

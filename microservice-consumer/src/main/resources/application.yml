@@ -1,2 +1,13 @@
 server:
   port: 8080
+spring:
+  application:
+    name: microservice-consumer-dept
+
+#配置eureka的信息
+eureka:
+  client:
+    service-url.defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-consumer-dept
+    prefer-ip-address: true
