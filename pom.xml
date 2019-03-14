@@ -13,6 +13,8 @@
         <module>microservice-provider</module>
         <module>microservice-consumer</module>
         <module>microservice-eureka-server</module>
+        <module>microservice-eureka-server-7002</module>
+        <module>microservice-eureka-server-7003</module>
     </modules>
     <packaging>pom</packaging>
     <!--在父工程中，重点就是packaging标签，是pom类型的-->

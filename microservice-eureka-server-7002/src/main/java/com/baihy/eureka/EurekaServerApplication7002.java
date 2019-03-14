@@ -5,19 +5,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * @ProjectName: microservice-cloud
- * @packageName: com.baihy.eureka
- * @Description:
+ * @projectName: microservice-cloud
+ * @packageName: PACKAGE_NAME
+ * @description:
  * @author: huayang.bai
- * @date: 2019-03-10 11:42
+ * @date: 2019/03/14 14:07
  */
 @SpringBootApplication
 @EnableEurekaServer
-// Eureka Server服务器启动类，接收其他服务注册进来
-public class MicroServiceEurekaApplication {
+public class EurekaServerApplication7002 {
+
 
     public static void main(String[] args) {
-        SpringApplication.run(MicroServiceEurekaApplication.class, args);
+        SpringApplication.run(EurekaServerApplication7002.class, args);
     }
 
 }
