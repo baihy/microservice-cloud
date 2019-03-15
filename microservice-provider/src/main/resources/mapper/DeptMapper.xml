@@ -68,7 +68,7 @@
       DESCRIPTION = #{description,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=INTEGER}
   </update>
-    <select id="queryList" resultType="com.baihy.entity.Dept">
+    <select id="queryList" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from T_DEPT

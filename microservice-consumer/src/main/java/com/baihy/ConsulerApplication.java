@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @date: 2019-03-09 18:36
  */
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient   // 开启eureka客户端服务
 @EnableDiscoveryClient
 public class ConsulerApplication {
 
