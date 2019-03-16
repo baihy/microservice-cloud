@@ -15,10 +15,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient   // 开启eureka客户端服务
 @EnableDiscoveryClient
-public class ConsulerApplication {
+public class ConsulerApplication9000 {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsulerApplication.class, args);
+        SpringApplication.run(ConsulerApplication9000.class, args);
     }
 
 }

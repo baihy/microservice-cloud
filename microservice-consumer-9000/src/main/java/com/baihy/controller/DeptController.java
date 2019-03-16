@@ -17,7 +17,7 @@ import java.util.Map;
  * @date: 2019-03-09 17:50
  */
 @RestController
-@RequestMapping(value = "consumer/dept")
+@RequestMapping(value = "dept")
 public class DeptController {
 
     // 通过原生的url地址来访问REST ful API接口
