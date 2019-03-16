@@ -9,6 +9,7 @@ eureka:
   client:
     service-url.defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  #配置eureka server的地址
     register-with-eureka: false # 设置当前微服务不会注册到eureka server的注册表中
+
   instance:
     instance-id: microservice-consumer-dept  #配置微服务的实例名
     prefer-ip-address: true  #配置微服务显示ip地址，而不是通过主机名

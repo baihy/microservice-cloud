@@ -1,5 +1,7 @@
 server:
   port: 7001 # 服务的端口号
+
+
 eureka:
   server:
     enable-self-preservation: true # Eureka Server关闭自我保护机制
