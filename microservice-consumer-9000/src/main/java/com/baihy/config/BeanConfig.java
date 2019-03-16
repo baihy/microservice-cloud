@@ -1,5 +1,7 @@
 package com.baihy.config;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RetryRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,5 +22,15 @@ public class BeanConfig {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+    @Bean
+    public IRule myRule() {
+        /******指定负载均衡的策略********/
+        // return new RandomRule(); // 随机策略
+        RetryRule rule = new RetryRule();
+        rule.setMaxRetryMillis(2); // 设置重试次数
+        return rule;
+    }
+
 
 }

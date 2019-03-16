@@ -30,7 +30,7 @@ public class DeptController {
 
     @RequestMapping(value = "queryList", method = {RequestMethod.GET})
     public List<Dept> queryList() {
-        return deptService.list().parallelStream().map(dept -> dept.setHost("8001")).collect(Collectors.toList());
+        return deptService.list().parallelStream().map(dept -> dept.setHost("8003")).collect(Collectors.toList());
     }
 
     @RequestMapping(value = "add", method = {RequestMethod.POST})

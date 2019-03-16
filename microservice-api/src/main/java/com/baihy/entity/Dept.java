@@ -12,11 +12,13 @@ import java.io.Serializable;
 @Data
 @Accessors(chain = true)
 public class Dept implements Serializable {
-    
+
     private Integer id;
 
     private String deptName;
 
     private String description;
+
+    private String host;
 
 }

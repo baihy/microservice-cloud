@@ -10,11 +10,13 @@
     <modules>
         <!--maven工程聚合子模块-->
         <module>microservice-api</module>
-        <module>microservice-provider</module>
-        <module>microservice-consumer</module>
-        <module>microservice-eureka-server</module>
+        <module>microservice-consumer-9000</module>
+        <module>microservice-eureka-server-7001</module>
         <module>microservice-eureka-server-7002</module>
         <module>microservice-eureka-server-7003</module>
+        <module>microservice-provider-8001</module>
+        <module>microservice-provider-8002</module>
+        <module>microservice-provider-8003</module>
     </modules>
     <packaging>pom</packaging>
     <!--在父工程中，重点就是packaging标签，是pom类型的-->
