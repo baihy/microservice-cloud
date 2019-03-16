@@ -1,4 +1,4 @@
-package com.baihy.controller;
+package com.baihy.cloud.controller;
 
 import com.baihy.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * @ProjectName: microservice-cloud
- * @packageName: com.baihy.controller
+ * @packageName: com.baihy.cloud.controller
  * @Description:
  * @author: huayang.bai
  * @date: 2019-03-09 17:50
