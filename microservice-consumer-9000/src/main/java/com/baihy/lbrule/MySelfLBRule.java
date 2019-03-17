@@ -1,7 +1,6 @@
 package com.baihy.lbrule;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -12,10 +11,10 @@ import org.springframework.context.annotation.Bean;
  * @date: 2019-03-16 20:11
  */
 public class MySelfLBRule {
-
+    /***注意这个类是不能被扫描到的***/
     @Bean
     public IRule mySelfRule() {
-        return new RandomRule();
+        return new RandomRuleMySelfRule(3);
     }
 
 }
