@@ -29,7 +29,6 @@ public class DeptController {
 
     @Autowired
     private RestTemplate restTemplate;
-    
 
     @RequestMapping("queryList")
     public List<Dept> queryList() {
