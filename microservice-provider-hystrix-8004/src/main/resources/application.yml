@@ -24,8 +24,6 @@ eureka:
     instance-id: microservice-provider-dept-hystrix-8004 # 配置当前服务的服务名称
     prefer-ip-address: true # 访问路径可以显示ip地址
 
-
-
 info:
   company: 河南中审科技有限公司
   projectName: @project.artifactId@

@@ -2,6 +2,7 @@ package com.baihy.controller;
 
 import com.baihy.entity.Dept;
 import com.baihy.service.IDeptService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,7 +49,7 @@ public class DeptController {
 
 
     @RequestMapping(value = "findById", method = {RequestMethod.GET})
-   // @HystrixCommand(fallbackMethod = "processHystrix_FindById") // 一旦调用发生异常，就会自动调用fallbackMethod属性指定的方法
+    @HystrixCommand(fallbackMethod = "processHystrix_FindById") // 一旦调用发生异常，就会自动调用fallbackMethod属性指定的方法
     public Dept findById(Integer id) {
         Dept dept = deptService.get(id);
         if (dept == null) {
