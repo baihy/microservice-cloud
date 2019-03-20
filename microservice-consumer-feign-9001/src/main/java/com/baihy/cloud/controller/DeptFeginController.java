@@ -4,7 +4,6 @@ import com.baihy.entity.Dept;
 import com.baihy.service.DeptClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -31,7 +30,7 @@ public class DeptFeginController {
         return deptClientService.list();
     }
 
-    @RequestMapping(value = "findById", method = RequestMethod.GET)
+    @RequestMapping(value = "findById")
     public Dept findById(Integer id) {
         return deptClientService.get(id);
     }

@@ -25,7 +25,7 @@ public class DeptController {
     @Autowired
     private IDeptService deptService;
 
-    @RequestMapping(value = "queryList", method = {RequestMethod.GET})
+    @RequestMapping(value = "queryList")
     public List<Dept> queryList() {
         return deptService.list().parallelStream().map(dept -> dept.setHost("8002")).collect(Collectors.toList());
     }
@@ -44,7 +44,7 @@ public class DeptController {
     }
 
 
-    @RequestMapping(value = "findById", method = {RequestMethod.GET})
+    @RequestMapping(value = "findById")
     public Dept findById(@RequestParam("id") Integer id) {
         return deptService.get(id);
     }
