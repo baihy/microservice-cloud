@@ -29,7 +29,7 @@ public class DeptController {
 
     @Autowired
     private RestTemplate restTemplate;
-    
+
 
     @RequestMapping("queryList")
     public List<Dept> queryList() {
@@ -37,8 +37,8 @@ public class DeptController {
     }
 
     @RequestMapping("findById")
-    public Dept findById() {
-        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/findById?id=1", Dept.class);
+    public Dept findById(Integer id) {
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/findById?id=" + id, Dept.class);
     }
 
 

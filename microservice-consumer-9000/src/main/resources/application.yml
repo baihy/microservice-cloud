@@ -13,3 +13,4 @@ eureka:
   instance:
     instance-id: microservice-consumer-dept  #配置微服务的实例名
     prefer-ip-address: true  #配置微服务显示ip地址，而不是通过主机名
+debug: true

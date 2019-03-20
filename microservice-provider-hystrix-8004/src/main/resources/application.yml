@@ -1,6 +1,6 @@
 # 配置服务的信息
 server:
-  port: 8001
+  port: 8004
 # 配置mybatis的信息
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml
@@ -21,7 +21,7 @@ eureka:
   client:
     service-url.defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka # 配置eureka server的地址。
   instance:
-    instance-id: microservice-provider-dept-8001 # 配置当前服务的服务名称
+    instance-id: microservice-provider-dept-hystrix-8004 # 配置当前服务的服务名称
     prefer-ip-address: true # 访问路径可以显示ip地址
 
 

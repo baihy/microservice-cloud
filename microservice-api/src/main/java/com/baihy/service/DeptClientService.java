@@ -3,6 +3,7 @@ package com.baihy.service;
 import com.baihy.entity.Dept;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public interface DeptClientService {
     @RequestMapping("/dept/add")
     boolean add(Dept dept);
 
-    @RequestMapping("/dept/findById")
+    @RequestMapping(value = "/dept/findById", method = RequestMethod.GET)
     Dept get(Integer id);
 
     @RequestMapping("/dept/queryList")

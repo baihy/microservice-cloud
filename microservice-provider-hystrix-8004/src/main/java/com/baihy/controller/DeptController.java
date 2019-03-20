@@ -3,7 +3,10 @@ package com.baihy.controller;
 import com.baihy.entity.Dept;
 import com.baihy.service.IDeptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
@@ -45,8 +48,18 @@ public class DeptController {
 
 
     @RequestMapping(value = "findById", method = {RequestMethod.GET})
-    public Dept findById(@RequestParam("id") Integer id) {
-        return deptService.get(id);
+   // @HystrixCommand(fallbackMethod = "processHystrix_FindById") // 一旦调用发生异常，就会自动调用fallbackMethod属性指定的方法
+    public Dept findById(Integer id) {
+        Dept dept = deptService.get(id);
+        if (dept == null) {
+            throw new RuntimeException("主键ID" + id + "不存在");
+        }
+        return dept;
+    }
+
+
+    public Dept processHystrix_FindById(Integer id) {
+        return new Dept().setId(id).setDeptName("该主键id " + id + "数据不存在！").setHost("8004");
     }
 
 }

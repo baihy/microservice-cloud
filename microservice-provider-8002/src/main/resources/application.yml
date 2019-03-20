@@ -18,7 +18,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3308/microservice-cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true
+    url: jdbc:mysql://127.0.0.1:3307/microservice-cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true
     type: com.alibaba.druid.pool.DruidDataSource # 指定当前的数据源类型
   application:
     name: microservice-provider-dept
