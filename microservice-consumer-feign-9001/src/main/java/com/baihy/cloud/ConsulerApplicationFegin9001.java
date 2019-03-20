@@ -17,6 +17,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableEurekaClient   // 开启eureka客户端服务
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = {"com.baihy.service"})  //开启Feign
+//@EnableCircuitBreaker   // 开启服务熔断
 public class ConsulerApplicationFegin9001 {
 
     public static void main(String[] args) {
