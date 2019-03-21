@@ -1,12 +1,9 @@
 server:
   port: 3344  # 配置当前服务的端口号
 
-
-
 spring:
   application:
     name: microservice-config   # 配置当前服务的名称
-
 
   cloud:
     config:

@@ -21,7 +21,8 @@
         <module>microservice-provider-hystrix-8004</module>
         <module>microservice-hystrix-dashboard-8080</module>
         <module>microservice-zuul-gateway-9527</module>
-        <module>microservice-config-3344</module>
+        <module>microservice-config-server-3344</module>
+        <module>microservice-config-client-3355</module>
     </modules>
     <packaging>pom</packaging>
     <!--在父工程中，重点就是packaging标签，是pom类型的-->
