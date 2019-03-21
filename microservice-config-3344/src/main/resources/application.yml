@@ -1,0 +1,15 @@
+server:
+  port: 3344  # 配置当前服务的端口号
+
+
+
+spring:
+  application:
+    name: microservice-config   # 配置当前服务的名称
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:baihy/microservice-config.git # github上面git的仓库地址
